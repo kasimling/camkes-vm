@@ -1094,7 +1094,7 @@ int main_continued(void)
     ZF_LOGF_IF(err, "Failed to bind CB to SID");
 #endif /* CONFIG_ARM_SMMU */
 
-    err = vm_create_default_irq_controller(&vm);
+    err = vm_install_irq_controller(&vm);
     assert(!err);
 
     for (int i = 0; i < NUM_VCPUS; i++) {
