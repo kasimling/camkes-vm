@@ -36,7 +36,10 @@ static const char *plat_keep_devices[] = {
     "/pmu_a72",
     "/psci",
 };
-static const char *plat_keep_device_and_disable[] = {};
+static const char *plat_keep_device_and_disable[] = {
+	"/pmu-clock-controller@ff750000",
+	"/clock-controller@ff760000",
+};
 static const char *plat_keep_device_and_subtree[] = {
     "/interrupt-controller@fee00000",
 };
